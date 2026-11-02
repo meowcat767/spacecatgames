@@ -278,7 +278,6 @@ export default function Games() {
           name="description"
           content="Browse our extensive collection of free browser games"
         />
-        <link href="/css/style.css" rel="stylesheet" />
         <link href="/games.css" rel="stylesheet" />
       </Helmet>
 

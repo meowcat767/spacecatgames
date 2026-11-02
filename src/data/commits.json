@@ -1,5 +1,95 @@
 [
   {
+    "hash": "4c1a51e",
+    "author": "meowcat",
+    "date": "2026-11-02",
+    "message": "correct the footer, since its just me now"
+  },
+  {
+    "hash": "45d3b3c",
+    "author": "meowcat767",
+    "date": "2026-11-02",
+    "message": "Merge pull request #54 from meowcat767/dependabot/npm_and_yarn/npm_and_yarn-7708313e2a"
+  },
+  {
+    "hash": "5cd910a",
+    "author": "dependabot[bot]",
+    "date": "2026-09-24",
+    "message": "Bump the npm_and_yarn group across 1 directory with 14 updates"
+  },
+  {
+    "hash": "3a3ace0",
+    "author": "meowcat767",
+    "date": "2026-08-12",
+    "message": "Merge pull request #52 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-b0757cab72"
+  },
+  {
+    "hash": "f41790c",
+    "author": "dependabot[bot]",
+    "date": "2026-07-25",
+    "message": "Bump the npm_and_yarn group across 1 directory with 2 updates"
+  },
+  {
+    "hash": "15e1173",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix granny"
+  },
+  {
+    "hash": "4c17ad7",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix blocky snakes"
+  },
+  {
+    "hash": "64b32e2",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix block blast"
+  },
+  {
+    "hash": "cfac18e",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix bergentruck"
+  },
+  {
+    "hash": "07b0ab5",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix bendy"
+  },
+  {
+    "hash": "42294cc",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "and yeah, there will be a re-write"
+  },
+  {
+    "hash": "6d53d71",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix Basketball Stars"
+  },
+  {
+    "hash": "3daf6ce",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "fix Baldi's Basics Plus"
+  },
+  {
+    "hash": "19e851c",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "remove bad parenting 1"
+  },
+  {
+    "hash": "c277653",
+    "author": "Ben",
+    "date": "2026-07-15",
+    "message": "repair postcss"
+  },
+  {
     "hash": "f63ae56",
     "author": "Ben",
     "date": "2026-07-15",
@@ -208,95 +298,5 @@
     "author": "Ben House",
     "date": "2026-05-06",
     "message": "bump version"
-  },
-  {
-    "hash": "a037a22",
-    "author": "Ben House",
-    "date": "2026-05-06",
-    "message": "remove the code editor"
-  },
-  {
-    "hash": "86a544f",
-    "author": "meowcat767",
-    "date": "2026-05-05",
-    "message": "Merge pull request #47 from neurontechofficial/v19-devel"
-  },
-  {
-    "hash": "066c9b1",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "feat: add brand logo to navbar and restructure navigation layout for improved alignment"
-  },
-  {
-    "hash": "65402e6",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "add bug report notice"
-  },
-  {
-    "hash": "5e24c1d",
-    "author": "meowcat767",
-    "date": "2026-05-05",
-    "message": "Merge pull request #46 from neurontechofficial/v19-devel"
-  },
-  {
-    "hash": "20e48b3",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "v19 ready"
-  },
-  {
-    "hash": "67c56ca",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "v19 ready"
-  },
-  {
-    "hash": "1427696",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "remove unused files"
-  },
-  {
-    "hash": "31afbf4",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "remove unused file"
-  },
-  {
-    "hash": "d7ed28a",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "add report a bug to navbar"
-  },
-  {
-    "hash": "12413d1",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "prevent survey from appearing"
-  },
-  {
-    "hash": "d7df458",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "dev mode did nothing"
-  },
-  {
-    "hash": "222a1d9",
-    "author": "Ben",
-    "date": "2026-05-05",
-    "message": "cleaning out unused nav stuff"
-  },
-  {
-    "hash": "2c372cb",
-    "author": "Ben",
-    "date": "2026-05-04",
-    "message": "we need a bug tracker"
-  },
-  {
-    "hash": "34258ec",
-    "author": "Ben",
-    "date": "2026-05-04",
-    "message": "featured games was pointless since I never updated"
   }
 ]
