@@ -50,11 +50,7 @@ export default function Footer() {
         </div>
 
         <p className="copyright">
-          © 2026 Nijika Softworks &{" "}
-          <a href="https://github.com/neurontechofficial">
-            Neuron Technologies
-          </a>{" "}
-          | All rights reserved.
+          © 2026 meowcat767
         </p>
 
         {/* Uptime Counter */}
