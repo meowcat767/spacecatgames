@@ -1,0 +1,17 @@
+/*
+ * Copyright (c) Starry Systems and Nijika Softworks.
+ */
+
+/* Place your CSS styles in this file */
+
+body {
+    background-color: black;
+}
+
+
+/* headings */
+
+iframe {
+	width: 100vw;
+	height: 100vh;
+}

@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) Starry Systems and Nijika Softworks.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+html, body {
+    overflow: hidden;
+}
+.button {
+    background-color: #002b50;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 60px;
+    height: 32px;
+	position: absolute;
+	margin-top: 92.5vh;
+	margin-left: 1vw;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    width: auto;
+    max-width: 32px;
+    transition: max-width 0.5s ease-in-out;
+}
+.button:hover {
+    max-width: 300px;
+}
+.icon {
+    font-family: 'FontAwesome';
+    font-size: 16px;
+    margin-right: 16px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+}
+.text {
+    white-space: nowrap;
+    padding-right: 16px;
+    font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+}

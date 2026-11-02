@@ -1,0 +1,30 @@
+/*
+ * Copyright (c) Starry Systems and Nijika Softworks.
+ */
+
+/* Add subtle hover tooltips to icon-only buttons */
+.icon-button {
+  position: relative;
+}
+
+.icon-button:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  visibility: visible;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.icon-button::after {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}

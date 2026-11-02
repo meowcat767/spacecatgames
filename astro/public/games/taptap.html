@@ -1,0 +1,52 @@
+<!--
+  ~ Copyright (c) Starry Systems and Nijika Softworks.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2104022260564752" crossorigin="anonymous"></script>
+
+<title>Tap Goal</title>
+<style>
+    body {
+        margin: 0; /* Remove default margin */
+    }
+    iframe {      
+        display: block;  /* iframes are inline by default */   
+        height: 100vh;  /* Set height to 100% of the viewport height */   
+        width: 100vw;  /* Set width to 100% of the viewport width */     
+        border: none; /* Remove default border */
+        background: lightyellow; /* Just for styling */
+    }
+</style>
+
+<script>
+  !function(b,e,t,r){
+    b[t]=b[t]||function(...args){(b[t].q=b[t].q||[]).push(args)};
+    b[t].l=+new Date;
+    var s=e.createElement('script'); s.async=1; s.crossOrigin='anonymous';
+    s.src='https://betterstack.net/b.js?t='+r;
+    (e.head||e.getElementsByTagName('head')[0]).appendChild(s);
+  }(window,document,'betterstack','Xx9RqEJ7jW6ofziTJ92TkoQk');
+  betterstack('init', { environment: 'production' });
+</script>
+</head>
+<body>
+    <iframe id="gameIframe" src="https://projecttdk.netlify.app/tapgoal"></iframe>
+    <style>
+        body {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        }
+    </style>
+    <script>
+        const iframe = document.getElementById('gameIframe');
+
+        // Prevent the page from redirecting entirely
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = ''; // Required for most browsers to show a confirmation dialog
+        });
+    </script>
+</body>
+</html>
