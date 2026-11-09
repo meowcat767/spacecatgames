@@ -41,11 +41,7 @@ export default function Footer() {
     <footer>
       <div className="container">
         <p>
-          © 2026 Nijika Softworks &{" "}
-          <a href="https://github.com/neurontechofficial">
-            Neuron Technologies
-          </a>{" "}
-          | All rights reserved.
+          &copy; meowcat767 and Contributors, 2026.
         </p>
 
         {/* Uptime Counter */}
