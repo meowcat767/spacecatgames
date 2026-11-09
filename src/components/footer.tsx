@@ -127,8 +127,6 @@ export default function Footer() {
         </style>
 
         {/* Images */}
-        <img src="images/react.png" width={150} height={60} />
-        <img src="images/vite.svg" height={55} />
         <br />
 
         {/* Build Info */}
