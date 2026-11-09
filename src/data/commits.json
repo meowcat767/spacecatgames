@@ -1,9 +1,39 @@
 [
   {
+    "hash": "b86fe70",
+    "author": "meowcat",
+    "date": "2026-11-09",
+    "message": "create attributes"
+  },
+  {
+    "hash": "70af86d",
+    "author": "meowcat",
+    "date": "2026-11-02",
+    "message": "merge"
+  },
+  {
+    "hash": "2cffc9d",
+    "author": "meowcat",
+    "date": "2026-11-02",
+    "message": "new UI"
+  },
+  {
+    "hash": "f10e520",
+    "author": "meowcat767",
+    "date": "2026-11-02",
+    "message": "Merge pull request #56 from meowcat767/dependabot/npm_and_yarn/npm_and_yarn-dbe61f74da"
+  },
+  {
     "hash": "4c1a51e",
     "author": "meowcat",
     "date": "2026-11-02",
     "message": "correct the footer, since its just me now"
+  },
+  {
+    "hash": "3c217fd",
+    "author": "dependabot[bot]",
+    "date": "2026-11-02",
+    "message": "Bump the npm_and_yarn group across 1 directory with 9 updates"
   },
   {
     "hash": "45d3b3c",
@@ -268,35 +298,5 @@
     "author": "Ben",
     "date": "2026-05-06",
     "message": "Merge remote-tracking branch 'origin/main'"
-  },
-  {
-    "hash": "63cfc38",
-    "author": "Ben",
-    "date": "2026-05-06",
-    "message": "fix recent games"
-  },
-  {
-    "hash": "a2381c1",
-    "author": "Ben House",
-    "date": "2026-05-06",
-    "message": "comment fix"
-  },
-  {
-    "hash": "6944204",
-    "author": "Ben House",
-    "date": "2026-05-06",
-    "message": "update SECURITY.md"
-  },
-  {
-    "hash": "fda0092",
-    "author": "Ben House",
-    "date": "2026-05-06",
-    "message": "update SECURITY.md"
-  },
-  {
-    "hash": "dd20d12",
-    "author": "Ben House",
-    "date": "2026-05-06",
-    "message": "bump version"
   }
 ]

@@ -4,18 +4,14 @@
 
 /* Game-specific styles */
 .game-controls {
-  background: #eef5fa !important;
-  padding: 10px !important;
-  border: 1px solid #d0dfeb;
-  border-radius: 3px !important;
-  box-shadow: inset 0 1px 0 #fff !important;
-  margin: 12px 0 6px !important;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
   display: flex;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 8px !important;
-  min-height: 0 !important;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .controls-row {
@@ -27,26 +23,24 @@
 }
 
 .search-container {
-  width: auto !important;
-  flex: 1 1 250px !important;
+  width: 100%;
 }
 
 .search-input {
-  width: min(100%, 320px) !important;
-  min-height: 27px;
-  padding: 4px 7px !important;
-  border: 1px solid #7f9db9 !important;
-  border-radius: 0 !important;
-  font-size: 12px !important;
-  transition: border-color 0.15s ease;
-  background-color: #fff !important;
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
 }
 
 .search-input:focus {
-  border-color: #3879a4 !important;
-  background-color: #fff !important;
-  box-shadow: none !important;
-  outline: 1px solid #9ac4dd !important;
+  border-color: #3498db;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
 }
 
 .sort-options {
@@ -65,22 +59,20 @@
 }
 
 .random-btn {
-  background: linear-gradient(180deg, #fff 0%, #dbeeff 100%) !important;
-  color: #174a70 !important;
-  border: 1px solid #6b9cc2 !important;
-  padding: 5px 14px !important;
-  border-radius: 3px !important;
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
 }
 
 .random-btn:hover {
-  background: linear-gradient(180deg, #fff, #c8e5fa) !important;
-  color: #003366 !important;
+  background-color: #8e44ad;
 }
 
 .game-count {
