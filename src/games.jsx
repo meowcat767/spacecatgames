@@ -6,9 +6,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
-import { trackGamePlay, flushAnalytics } from "./utils/analytics";
-import { usePlayHistory } from "./hooks/usePlayHistory";
-import posthog from "./utils/posthog";
+import { trackGamePlay } from "./utils/analytics";
 
 export default function Games() {
   const [games, setGames] = useState([]);
@@ -21,7 +19,6 @@ export default function Games() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [flagDrawerOpen, setFlagDrawerOpen] = useState(false);
   const [showSurveyPopup, setShowSurveyPopup] = useState(false);
-  const { recordPlay } = usePlayHistory();
   const gamesGridRef = useRef(null);
   const highlightedGameRef = useRef(null);
 
@@ -33,7 +30,6 @@ export default function Games() {
         setGames(data.games || []);
         setFilteredGames(data.games || []);
         setLoading(false);
-        localStorage.setItem("scg_survey_seen", "true"); // prevent it from appearing
       })
       .catch((err) => {
         console.error("Error loading games:", err);
@@ -73,23 +69,6 @@ export default function Games() {
     setFilteredGames(filtered);
   }, [searchTerm, sortType, games]);
 
-  useEffect(() => {
-    const trimmedSearchTerm = searchTerm.trim();
-
-    if (!trimmedSearchTerm) {
-      return;
-    }
-
-    const timeoutId = setTimeout(() => {
-      posthog.capture("game searched", {
-        search_term: trimmedSearchTerm,
-        results_count: filteredGames.length,
-      });
-    }, 500);
-
-    return () => clearTimeout(timeoutId);
-  }, [searchTerm, filteredGames.length]);
-
   // FPS Counter
   useEffect(() => {
     let lastFrame = performance.now();
@@ -125,10 +104,6 @@ export default function Games() {
 
   const handleRandomGame = () => {
     if (filteredGames.length === 0) return;
-    posthog.capture("random game selected", {
-      total_games_shown: filteredGames.length,
-    });
-    flushAnalytics();
 
     const randomIndex = Math.floor(Math.random() * filteredGames.length);
     const randomGame = filteredGames[randomIndex];
@@ -154,12 +129,6 @@ export default function Games() {
   };
 
   const handleCloseSurvey = () => {
-    try {
-      posthog?.capture?.("survey dismissed");
-      flushAnalytics();
-    } catch (e) {
-      console.warn("[Analytics] Failed to track survey close:", e);
-    }
     setShowSurveyPopup(false);
     localStorage.setItem("scg_survey_seen", "true");
   };
@@ -175,16 +144,9 @@ export default function Games() {
         new Promise((resolve) => setTimeout(resolve, 300)), // Max wait 300ms
       ]);
       console.log("[Debug] trackGamePlay finished or timed out");
-      flushAnalytics(); // Ensure events are sent
     } catch (e) {
       console.warn("[Analytics] Tracking timed out or failed", e);
     }
-
-    // Explicit small delay to ensure PostHog flush request isn't aborted by the browser
-    await new Promise((resolve) => setTimeout(resolve, 250));
-
-    // Record play in history
-    recordPlay(game);
 
     // Track Recently Played
     const newRecent = [
@@ -207,15 +169,38 @@ export default function Games() {
   if (loading) {
     return (
       <>
-        <Helmet></Helmet>
+        <Helmet>
+        </Helmet>
         <div className="container">
+          {showSurveyPopup && (
+            <div className="survey-popup-overlay">
+              <div className="survey-popup">
+                <button className="survey-close" onClick={handleCloseSurvey}>
+                  &times;
+                </button>
+                <h3>Quick Survey! 🐱</h3>
+                <p>
+                  We'd love to hear your thoughts on Space Cat Games. It only
+                  takes a minute!
+                </p>
+                <a
+                  href="https://form.typeform.com/to/Dp8OGYV7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn survey-btn"
+                  onClick={handleCloseSurvey}
+                >
+                  Take the Survey
+                </a>
+              </div>
+            </div>
+          )}
           <h1>Games Collection</h1>
           <div className="game-controls skeleton-controls">
             <div className="skeleton skeleton-search"></div>
             <div className="skeleton skeleton-button"></div>
           </div>
           <div className="games-grid">
-            <p className="text-center">A re-write is starting soon, please bear with us!</p>
             {[...Array(12)].map((_, i) => (
               <div key={i} className="game-item skeleton-card">
                 <div className="skeleton skeleton-img"></div>
@@ -278,6 +263,7 @@ export default function Games() {
           name="description"
           content="Browse our extensive collection of free browser games"
         />
+        <link href="/css/style.css" rel="stylesheet" />
         <link href="/games.css" rel="stylesheet" />
       </Helmet>
 
@@ -324,21 +310,37 @@ export default function Games() {
             />
           </div>
 
-          <button
-            id="randomGameBtn"
-            className="btn random-btn"
-            onClick={handleRandomGame}
-          >
-            <span className="icon">🎲</span> Random Game
-          </button>
+          <div className="controls-row">
+            <div className="sort-options">
+              <label htmlFor="gameSort">Sort by:</label>
+              <select
+                id="gameSort"
+                className="sort-select"
+                value={sortType}
+                onChange={(e) => setSortType(e.target.value)}
+              >
+                <option value="default">Default</option>
+                <option value=" az">Name (A-Z)</option>
+                <option value="za">Name (Z-A)</option>
+              </select>
+            </div>
+
+            <button
+              id="randomGameBtn"
+              className="btn random-btn"
+              onClick={handleRandomGame}
+            >
+              <span className="icon">🎲</span> Random Game
+            </button>
+          </div>
+
+          <div className="game-count">
+            Showing <span id="visibleCount">{filteredGames.length}</span> of{" "}
+            <span id="totalCount">{games.length}</span> games
+          </div>
         </div>
 
-        <div className="game-count">
-          Showing <span id="visibleCount">{filteredGames.length}</span> of{" "}
-          <span id="totalCount">{games.length}</span> games
-        </div>
-
-        {/* Recently Played Section */}
+        {/* Recently Played Section - Moved below controls */}
         {recentGames.length > 0 && (
           <section className="recent-games-section">
             <h2>Recently Played</h2>
@@ -418,8 +420,6 @@ export default function Games() {
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        justify-content: flex-start;
-                        text-align: center;
                     }
                     .game-item:hover { transform: translateY(-5px); }
                     
@@ -433,62 +433,59 @@ export default function Games() {
                     .recent-games-section { margin-bottom: 40px; }
                     .recent-games-scroll { 
                         overflow-x: auto; 
-                        padding-bottom: 15px;
-                        margin: 0 -20px;
-                        padding-left: 20px;
-                        padding-right: 20px;
+                        padding-bottom: 12px;
                         scrollbar-width: thin;
-                        -webkit-overflow-scrolling: touch;
-                        display: flex;
                     }
                     .recent-grid { 
                         display: flex !important; 
                         flex-wrap: nowrap !important; 
                         gap: 15px; 
-                        justify-content: center !important;
+                        justify-content: flex-start !important;
                     }
                     .game-item.small { 
-                        width: 140px !important;
-                        min-width: 140px !important; 
-                        max-width: 140px !important;
-                        display: flex !important;
-                        flex-direction: column !important;
-                        align-items: center !important;
+                        min-width: 140px; 
+                        max-width: 140px;
                     }
                     .game-item.small button {
-                        width: 140px !important;
                         height: 140px !important;
-                        padding: 0 !important;
-                        margin: 0 auto !important;
+                        padding: 10px !important;
                         border-radius: 15px !important;
-                        display: flex !important;
-                        justify-content: center !important;
-                        align-items: center !important;
-                        box-sizing: border-box !important;
-                        background: var(--bg-card) !important;
                     }
                     .game-item.small img {
                         max-width: 80px !important;
                         max-height: 80px !important;
-                        margin: 0 auto !important;
-                        display: block !important;
-                        object-fit: contain !important;
                     }
                     .game-item.small p { 
                         font-size: 0.8em; 
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        margin: 8px 0 0 0 !important;
-                        width: 100% !important;
-                        text-align: center !important;
-                        padding: 0 !important;
-                        box-sizing: border-box !important;
+                        margin-top: 8px;
                     }
                     `}
       </style>
 
       <Footer />
+
+      {/* FPS Counter */}
+      <div
+        id="fps-counter"
+        style={{
+          position: "fixed",
+          top: 10,
+          right: 10,
+          background: "rgba(20,20,20,0.8)",
+          color: "#0f0",
+          fontFamily: "monospace",
+          fontSize: 16,
+          padding: "6px 12px",
+          borderRadius: 6,
+          zIndex: 9999,
+          pointerEvents: "none",
+        }}
+      >
+        FPS: {fps}
+      </div>
 
       {/* Back to Top Button */}
       {showBackToTop && (
@@ -570,27 +567,21 @@ export default function Games() {
             background: "#fff",
             border: "1px solid #ccc",
             borderRadius: "8px 0 0 8px",
-            padding: "12px 8px",
+            padding: "10px 5px 10px 10px",
             boxShadow: "0 2px 8px rgba(0, 0, 0, 0.2)",
-            minWidth: 200,
+            minWidth: 180,
+            minHeight: 70,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
             overflowX: "auto",
-            overflowY: "hidden",
           }}
         >
           <img
             src="https://count.getloli.com/@:spacecatgames?name=%3Aspacecatgames&theme=original-new&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=0&prefix=0"
             alt="Visitor counter"
-            style={{
-              width: "100%",
-              maxWidth: "180px",
-              height: "auto",
-              display: "block",
-              imageRendering: "pixelated",
-            }}
+            style={{ maxWidth: "100%", height: "auto" }}
           />
         </div>
       </div>

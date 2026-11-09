@@ -1,302 +1,302 @@
 [
   {
-    "hash": "b86fe70",
-    "author": "meowcat",
-    "date": "2026-11-09",
-    "message": "create attributes"
+    "hash": "57d568a",
+    "author": "Ben",
+    "date": "2026-03-05",
+    "message": "working on settings"
   },
   {
-    "hash": "70af86d",
-    "author": "meowcat",
-    "date": "2026-11-02",
-    "message": "merge"
+    "hash": "7dd71f5",
+    "author": "Ben",
+    "date": "2026-03-05",
+    "message": "add 64 in 1 NES"
   },
   {
-    "hash": "2cffc9d",
-    "author": "meowcat",
-    "date": "2026-11-02",
-    "message": "new UI"
+    "hash": "3389816",
+    "author": "Ben",
+    "date": "2026-03-05",
+    "message": "remove the big e"
   },
   {
-    "hash": "f10e520",
+    "hash": "4a173ad",
+    "author": "Ben",
+    "date": "2026-03-04",
+    "message": "update the big e"
+  },
+  {
+    "hash": "6c1f49f",
+    "author": "Ben",
+    "date": "2026-03-04",
+    "message": "update the big e"
+  },
+  {
+    "hash": "f46e57c",
+    "author": "Ben",
+    "date": "2026-03-02",
+    "message": "add the big e"
+  },
+  {
+    "hash": "84e80ca",
     "author": "meowcat767",
-    "date": "2026-11-02",
-    "message": "Merge pull request #56 from meowcat767/dependabot/npm_and_yarn/npm_and_yarn-dbe61f74da"
+    "date": "2026-03-02",
+    "message": "Merge pull request #29 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-b2936519f3"
   },
   {
-    "hash": "4c1a51e",
-    "author": "meowcat",
-    "date": "2026-11-02",
-    "message": "correct the footer, since its just me now"
-  },
-  {
-    "hash": "3c217fd",
-    "author": "dependabot[bot]",
-    "date": "2026-11-02",
-    "message": "Bump the npm_and_yarn group across 1 directory with 9 updates"
-  },
-  {
-    "hash": "45d3b3c",
+    "hash": "78d0139",
     "author": "meowcat767",
-    "date": "2026-11-02",
-    "message": "Merge pull request #54 from meowcat767/dependabot/npm_and_yarn/npm_and_yarn-7708313e2a"
+    "date": "2026-03-02",
+    "message": "Remove automations and contributors section from README"
   },
   {
-    "hash": "5cd910a",
+    "hash": "c81ea33",
     "author": "dependabot[bot]",
-    "date": "2026-09-24",
-    "message": "Bump the npm_and_yarn group across 1 directory with 14 updates"
+    "date": "2026-02-28",
+    "message": "Bump rollup in the npm_and_yarn group across 1 directory"
   },
   {
-    "hash": "3a3ace0",
+    "hash": "f54aeeb",
     "author": "meowcat767",
-    "date": "2026-08-12",
-    "message": "Merge pull request #52 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-b0757cab72"
+    "date": "2026-02-26",
+    "message": "Update README.md"
   },
   {
-    "hash": "f41790c",
-    "author": "dependabot[bot]",
-    "date": "2026-07-25",
-    "message": "Bump the npm_and_yarn group across 1 directory with 2 updates"
+    "hash": "c9b27c8",
+    "author": "Ben House",
+    "date": "2026-02-24",
+    "message": "huwahh"
   },
   {
-    "hash": "15e1173",
+    "hash": "cb3830d",
+    "author": "Ben House",
+    "date": "2026-02-24",
+    "message": "version bump"
+  },
+  {
+    "hash": "9caba05",
+    "author": "Ben House",
+    "date": "2026-02-24",
+    "message": "thanks chase"
+  },
+  {
+    "hash": "7b03c14",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix granny"
+    "date": "2026-02-15",
+    "message": "101?"
   },
   {
-    "hash": "4c17ad7",
+    "hash": "9ae3d9f",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix blocky snakes"
+    "date": "2026-02-15",
+    "message": "experimenting with vercel speed insights"
   },
   {
-    "hash": "64b32e2",
+    "hash": "762d629",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix block blast"
+    "date": "2026-02-15",
+    "message": "vercel unhappy"
   },
   {
-    "hash": "cfac18e",
+    "hash": "a4897da",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix bergentruck"
+    "date": "2026-02-15",
+    "message": "Final commit for v18.0.0"
   },
   {
-    "hash": "07b0ab5",
+    "hash": "3971dc7",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix bendy"
+    "date": "2026-02-15",
+    "message": "invalid div"
   },
   {
-    "hash": "42294cc",
+    "hash": "464f125",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "and yeah, there will be a re-write"
+    "date": "2026-02-15",
+    "message": "start removing marquees"
   },
   {
-    "hash": "6d53d71",
+    "hash": "5303484",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix Basketball Stars"
+    "date": "2026-02-15",
+    "message": "fixed"
   },
   {
-    "hash": "3daf6ce",
+    "hash": "926c624",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix Baldi's Basics Plus"
+    "date": "2026-02-15",
+    "message": "who the hell put 700 ads"
   },
   {
-    "hash": "19e851c",
+    "hash": "6b05d28",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "remove bad parenting 1"
+    "date": "2026-02-15",
+    "message": "started removing ads because they don't work."
   },
   {
-    "hash": "c277653",
+    "hash": "8bda7a1",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "repair postcss"
+    "date": "2026-02-15",
+    "message": "change ref"
   },
   {
-    "hash": "f63ae56",
+    "hash": "514cc2c",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix animal crossing"
+    "date": "2026-02-15",
+    "message": "lagtrain???"
   },
   {
-    "hash": "5caaa1b",
+    "hash": "e58c1cd",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "better SLOC readability"
+    "date": "2026-02-15",
+    "message": "actually add chicken game 5"
   },
   {
-    "hash": "a291756",
+    "hash": "ad1e809",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "now SLOC all"
+    "date": "2026-02-14",
+    "message": "add chicken game 5"
   },
   {
-    "hash": "3ed3156",
+    "hash": "fffcf67",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "lock"
+    "date": "2026-02-14",
+    "message": "add chicken game 4"
   },
   {
-    "hash": "c7925c5",
+    "hash": "d46b887",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "remove yuri folder, update husky pre commit"
+    "date": "2026-02-14",
+    "message": "add chicken game 3"
   },
   {
-    "hash": "e55aaba",
+    "hash": "f20a8fc",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix Ages of Conflict"
+    "date": "2026-02-14",
+    "message": "move back to NS"
   },
   {
-    "hash": "49c93d2",
+    "hash": "66a0dab",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "mreow"
+  },
+  {
+    "hash": "34196b2",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "mroew"
+  },
+  {
+    "hash": "f20b910",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update user form"
+  },
+  {
+    "hash": "7c55da9",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "add mazball"
+  },
+  {
+    "hash": "e77a636",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "add mazball"
+  },
+  {
+    "hash": "a051a75",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update NS to CB"
+  },
+  {
+    "hash": "621e185",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "version bump"
+  },
+  {
+    "hash": "44bc5c9",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update C info to 2025"
+  },
+  {
+    "hash": "85ed37c",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "version bump"
+  },
+  {
+    "hash": "20ab5dc",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "center that text"
+  },
+  {
+    "hash": "e5b27ed",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update text under header update cc"
+  },
+  {
+    "hash": "12cd17b",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "Update featured games under-text"
+  },
+  {
+    "hash": "b200b93",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update cc"
+  },
+  {
+    "hash": "cba0473",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "Update CC"
+  },
+  {
+    "hash": "57d8fa3",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "trim section"
+  },
+  {
+    "hash": "206683a",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "commit bump"
+  },
+  {
+    "hash": "173df69",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "Version bump"
+  },
+  {
+    "hash": "7b54f32",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "add space waves"
+  },
+  {
+    "hash": "6c0b3d8",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "update featured"
+  },
+  {
+    "hash": "e3b6253",
+    "author": "Ben House",
+    "date": "2026-02-13",
+    "message": "Update featured to Geometry Dash"
+  },
+  {
+    "hash": "7c5afe3",
     "author": "Ben",
-    "date": "2026-07-15",
-    "message": "remove 2048 merge run"
-  },
-  {
-    "hash": "6ece6ba",
-    "author": "Ben",
-    "date": "2026-07-15",
-    "message": "API change for 64 in one nes"
-  },
-  {
-    "hash": "d20f0c4",
-    "author": "Ben",
-    "date": "2026-07-15",
-    "message": "astro stuff"
-  },
-  {
-    "hash": "e5cd1dd",
-    "author": "Ben",
-    "date": "2026-07-15",
-    "message": "fix 64 in one nes"
-  },
-  {
-    "hash": "bfd2862",
-    "author": "meowcat767",
-    "date": "2026-07-11",
-    "message": "Merge pull request #51 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-c1ac98e17c"
-  },
-  {
-    "hash": "f67e74a",
-    "author": "dependabot[bot]",
-    "date": "2026-07-09",
-    "message": "Bump the npm_and_yarn group across 1 directory with 6 updates"
-  },
-  {
-    "hash": "05ba787",
-    "author": "meowcat767",
-    "date": "2026-06-27",
-    "message": "Merge pull request #50 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-0213aa4daa"
-  },
-  {
-    "hash": "885ffe0",
-    "author": "dependabot[bot]",
-    "date": "2026-06-17",
-    "message": "Bump dompurify in the npm_and_yarn group across 1 directory"
-  },
-  {
-    "hash": "3161ccb",
-    "author": "meowcat767",
-    "date": "2026-06-12",
-    "message": "Merge pull request #49 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-b91bce2acc"
-  },
-  {
-    "hash": "e371016",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "SLOC TIME!!!!!!!!!"
-  },
-  {
-    "hash": "c725ce1",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "fix sandboxels"
-  },
-  {
-    "hash": "39a0551",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "clean old sandboxels"
-  },
-  {
-    "hash": "3347949",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "test commit"
-  },
-  {
-    "hash": "5ca888a",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "Add a link to the discord server"
-  },
-  {
-    "hash": "09361fc",
-    "author": "dependabot[bot]",
-    "date": "2026-06-09",
-    "message": "Bump the npm_and_yarn group across 1 directory with 3 updates"
-  },
-  {
-    "hash": "ceac694",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "Merge remote-tracking branch 'origin/main'"
-  },
-  {
-    "hash": "505d6cc",
-    "author": "Ben",
-    "date": "2026-06-09",
-    "message": "update sandboxels"
-  },
-  {
-    "hash": "4d4f567",
-    "author": "meowcat767",
-    "date": "2026-06-09",
-    "message": "Merge pull request #48 from neurontechofficial/dependabot/npm_and_yarn/npm_and_yarn-3287febb90"
-  },
-  {
-    "hash": "6d0bc68",
-    "author": "dependabot[bot]",
-    "date": "2026-05-28",
-    "message": "Bump the npm_and_yarn group across 1 directory with 2 updates"
-  },
-  {
-    "hash": "a4b5b8d",
-    "author": "Ben",
-    "date": "2026-05-10",
-    "message": "update maintain"
-  },
-  {
-    "hash": "d95386c",
-    "author": "Ben",
-    "date": "2026-05-10",
-    "message": "add just shapes and beats"
-  },
-  {
-    "hash": "e5580ef",
-    "author": "Ben",
-    "date": "2026-05-10",
-    "message": "add animal crossing"
-  },
-  {
-    "hash": "83878b0",
-    "author": "Ben",
-    "date": "2026-05-07",
-    "message": "panic keys!"
-  },
-  {
-    "hash": "95ffcaf",
-    "author": "Ben",
-    "date": "2026-05-06",
-    "message": "Merge remote-tracking branch 'origin/main'"
+    "date": "2026-02-07",
+    "message": "update tooling"
   }
 ]

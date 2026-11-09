@@ -17,29 +17,83 @@ export default function Credits() {
       <div className="container">
         <h1>Credits &amp; Acknowledgments</h1>
         <section className="credits-section">
-          <h2>Space Cat Games is powered by:</h2>
+          <h2>Development Team</h2>
           <ul className="credits-list">
             <li>
-              <strong>React</strong>{" "}
-              <a href="https://react.dev/">react.dev</a>
+              <strong>Lead Developer:</strong>{" "}
+              <a href="https://meowcat.site">Ben</a>
             </li>
             <li>
-              <strong>node.js:</strong>{" "}
-              <a href="https://nodejs.org/en">nodejs.org</a>
+              <strong>Developer:</strong>{" "}
+              <a href="https://lakshin.dev">Lakshin Hemachandran</a>
             </li>
             <li>
-              <strong>JetBrains WebStorm</strong>{" "}
-              <a href="https://www.jetbrains.com/webstorm/">jetbrans.com</a>
+              <strong>Developer:</strong>{" "}
+              <a href="https://anirudh.is-a.dev">Anirudh Karthik</a>
             </li>
             <li>
               <strong>
-                <a href="https://www.wolfram.com/language/">
-                  Wolfram Mathematica (Wolfram Language){" "}
+                <a href="https://github.com/neurontechofficial">
+                  Neuron Technologies{" "}
                 </a>
               </strong>
             </li>
           </ul>
+          <br />
+          <h2>Operations Team (NS)</h2>
+          <ul className="credits-list">
+            <li>
+              <strong>Data: </strong>maz
+            </li>
+          </ul>
         </section>
+        <section className="credits-section">
+          <h2>Special Thanks</h2>
+          <ul className="credits-list">
+            <li>
+              <strong>Chase:</strong> for giving us permission to distribute
+              copies of Chicken Game.
+            </li>
+            <li>
+              <strong>Neocities:</strong> For hosting us for almost a year
+            </li>
+            <li>
+              <strong>Kaiden:</strong> For helping start this project.
+            </li>
+            <li>
+              <strong>Luka:</strong> For being an early tester.
+            </li>
+            <li>
+              <strong>Netlify:</strong> For keeping us running at the moment.
+            </li>
+          </ul>
+        </section>
+        <h3>Tools</h3>
+        <ul className="credits-list">
+          <li>
+            <strong>React: </strong>Created by Meta Platforms, Inc.{" "}
+            <a href="https://react.dev/">https://react.dev</a>
+          </li>
+          <li>
+            <strong>Vite: </strong>Created by VoidZero Inc.{" "}
+            <a href="https://vite.dev/">https://vite.dev</a>
+          </li>
+          <li>
+            <strong>Git: </strong>Source Control Management System{" "}
+            <a href="https://git-scm.com/">https://git-scm.com/</a>
+          </li>
+          <li>
+            <strong>Node.js: </strong>The JavaScript runtime we use.{" "}
+            <a href="https://nodejs.org/">https://nodejs.org/</a>
+          </li>
+          <li>
+            <strong>OwO </strong>Huohhhh. fuwwy stwing twansfowmew ;3
+            <a href="https://yarnpkg.com/package?q=owo&name=%40zuzak%2Fowo">
+              {" "}
+              OwO on Yarn
+            </a>
+          </li>
+        </ul>
       </div>
       <Footer />
     </>

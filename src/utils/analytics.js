@@ -2,8 +2,6 @@
  * Copyright (c) Starry Systems and Nijika Softworks.
  */
 
-import posthog from './posthog';
-
 /**
  * Privacy-friendly game analytics.
  * Records game plays without tracking personal information.
@@ -37,22 +35,8 @@ export const trackGamePlay = async (game) => {
 
     if (ANALYTICS_ENDPOINT === 'YOUR_GOOGLE_APPS_SCRIPT_URL' || !ANALYTICS_ENDPOINT) {
         console.warn('[Analytics] Deployment needed or endpoint missing. Data:', payload);
+        return;
     }
-
-    // Capture to PostHog with enhanced data
-    const posthogData = {
-        game_title: game.title,
-        game_url: game.url,
-    };
-
-    // Add optional properties if they exist
-    if (game.img) posthogData.game_image = game.img;
-    if (game.alt) posthogData.game_alt = game.alt;
-    if (game.category) posthogData.game_category = game.category;
-    if (game.tags) posthogData.game_tags = game.tags;
-
-    posthog.capture('game played', posthogData);
-    console.log('[Analytics] PostHog event captured:', posthogData);
 
     try {
         console.log('[Analytics] Sending request to:', ANALYTICS_ENDPOINT);
@@ -71,18 +55,3 @@ export const trackGamePlay = async (game) => {
         console.error('[Analytics] Critical error during fetch setup:', error);
     }
 };
-
-/**
- * Flush PostHog events to ensure they're sent
- */
-export const flushAnalytics = () => {
-    try {
-        if (posthog && typeof posthog.flush === 'function') {
-            posthog.flush();
-            console.log('[Analytics] PostHog events flushed');
-        }
-    } catch (e) {
-        console.warn('[Analytics] Failed to flush events', e);
-    }
-};
-

@@ -4,41 +4,27 @@
 
 import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
+import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { trackGamePlay } from "./utils/analytics";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import RecentlyAdded from "./components/RecentlyAdded";
 
 export default function Home() {
   const [buildId, setBuildId] = useState("");
   const [tip, setTip] = useState("");
   const [header, setHeader] = useState("");
   const [gameOfTheDay, setGameOfTheDay] = useState(null);
-  const [games, setGames] = useState([]);
-  const recentlyAdded = games.filter((g) => {
-    const addedDate = new Date(g.addedAt);
-    const now = new Date();
-    const diffDays = (now - addedDate) / (1000 * 60 * 60 * 24);
-    return diffDays <= 30; // Added within the last 30 days
-  });
 
   const tips = [
     "Aishite Aishite Aishite!",
-     "Mayday! Go ahead and fire away!",
-     "webstorm better than vscode lmao",
-     "quick release christmas day lmfao - meowcat767",
-     "1 year of service!",
-     "The most Cutting Edge games website.",
-     "Cirno is behind you by the way.",
-     "did you know that for some reason this is react now?",
-     "Now the train's gone and left.",
-      "Should have used PHP!",
-      "PhpStorm intellisense is trash",
-      "Built with React!",
-      "We need a bug tracker!",
-
-
-
+    "Mayday! Go ahead and fire away!",
+    "webstorm better than vscode lmao",
+    "quick release christmas day lmfao - meowcat767",
+    "1 year of service!",
+    "The most Cutting Edge games website.",
+    "Cirno is behind you by the way.",
+    "did you know that for some reason this is react now?",
+    "Now the train's gone and left.",
 
   ];
 
@@ -48,7 +34,7 @@ export default function Home() {
     if (Math.random() < 0.1) {
       setHeader(`スペースキャットゲーム バージョン${version}`);
     } else {
-      setHeader(`Welcome to Space Cat Games ${version}`);
+      setHeader(`Welcome to Space Cat Games ${version} - Hello, React!`);
     }
 
     // Random tips
@@ -56,13 +42,11 @@ export default function Home() {
     pickTip();
     const interval = setInterval(pickTip, 5000);
 
-    // Fetch games data
-    fetch("/api/games.json")
+    // Fetch Game of the Day
+    fetch("/games.json")
       .then((r) => r.json())
       .then((data) => {
         if (data.games && data.games.length > 0) {
-          setGames(data.games);
-
           // Get current date string in GMT (YYYY-MM-DD)
           const dateStr = new Date().toISOString().split("T")[0];
 
@@ -122,7 +106,7 @@ export default function Home() {
         <SpeedInsights />
         <div className="container">
           <h1 id="main-header">{header}</h1>
-          <div className="build-id">{buildId}</div>
+          <div id="build-id">{buildId}</div>
           <div id="random-tip" className="random-tip">
             {tip}
           </div>
@@ -134,15 +118,11 @@ export default function Home() {
         </div>
       </div>
 
-        <div className={"container"}>
-        <RecentlyAdded games={recentlyAdded} />
-        </div>
-
       <div className="container">
         {gameOfTheDay && (
-          <section className="game-of-the-day centered">
+          <section className="game-of-the-day">
             <h2>Game of the Day</h2>
-            <div className="games-grid single-game centered">
+            <div className="games-grid single-game">
               <Game
                 title={gameOfTheDay.title}
                 img={gameOfTheDay.img}
@@ -174,7 +154,34 @@ export default function Home() {
             />
           </div>
         </section>
-        </div>
+
+        <section className="featured-games">
+          <h2>Featured Games</h2>
+          <p className="center">
+            Featured games are selected at the start of every month
+          </p>
+
+          <div className="games-grid">
+            <Game
+              title="Geometry Dash"
+              img="https://i.ibb.co/Xr5LnpSz/Logo-of-Geometry-Dash-svg.png"
+              url="/games/gm.html"
+            />
+
+            <Game
+              title="Snow Rider 3D"
+              img="/images/snowrider.png"
+              url="/games/snowrider.html"
+            />
+
+            <Game
+              title="Space Waves"
+              img="/images/spacewavesicon.png"
+              url="/games/spacewaves.html"
+            />
+          </div>
+        </section>
+      </div>
 
       <Footer />
     </>
